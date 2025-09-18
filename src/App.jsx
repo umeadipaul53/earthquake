@@ -91,7 +91,17 @@ function App() {
         </div>
       </div>
 
-      {loading && <p>Loading...</p>}
+      {loading && (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <p>Loading...</p>
+        </div>
+      )}
       {error && <p style={{ color: "red" }}>Error: {error}</p>}
       {data && data.length > 0 && (
         <div className="max-w-5xl mx-auto mt-8 bg-white shadow-md rounded-2xl overflow-hidden">
